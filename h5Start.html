@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <style type="text/css">
+        div.ex,div.exq
+        {
+            background-color:#e5eecc;
+            padding:7px;
+            border:solid 1px #c3c3c3;
+        }
+       h3{
+           background-color: #00b7ea;
+           width: 80dpi;
+       }
+    </style>
+
+</head>
+
+<body>
+
+<h3 class="ZG">中国办事处</h3>
+<div class="ex">
+    <button class="hide" type="button">隐藏</button>
+    <p class="ppd">联系人：张先生<br />
+        北三环中路 100 号<br />
+        北京可选的 speed 参数规定隐藏/显示的速度，可以取以下值："slow"、"fast" 或毫秒。
+        可选的 callback 参数是隐藏或显示完成后所执行的函数名称。
+        下面的例子演示了带有 speed 参数的 hide() 方法：</p>
+</div>
+
+<h3 class="MD">美国办事处</h3>
+<div class="exq">
+    <button class="hide1" type="button">隐藏</button>
+    <p>联系人：David<br />
+        第五大街 200 号<br />
+        纽约</p>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".ZG").click(function(){
+                $(".hide").parent().fadeToggle(400);
+//                $(".hide").parents(".ex").hide(500);
+
+
+        });
+        $('.MD').click(function () {
+            $(".hide1").parents(".exq").fadeToggle(500);
+        })
+    });
+</script>
+</body>
+</html>
